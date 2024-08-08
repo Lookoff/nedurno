@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ course.title }}{% endblock%}
+
+{% block content %}
+
+    <div class="container">
+        <div class="card mt-5" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-info">{{ course.title }}</h5>
+                <h6 class="text-info">{{ course.category }}</h6>
+                <p>Price: {{ course.price }}</p>
+                <p>Students Quantity: {{ course.students_qty }}</p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-info">Buy</a>
+            </div>
+        </div>
+    </div>
+
+    {% comment %} <h1 class="mt-5">{{ course.title }}</h1>
+    <h2>{{ course.category }}</h2>
+    <p>Price: {{ course.price }}</p>
+    <p>Students Quantity: {{ course.students_qty }}</p>
+    <button class="btn btn-info">Buy</button> {% endcomment %}
+{% endblock %}
